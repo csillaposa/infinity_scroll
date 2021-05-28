@@ -1,0 +1,17 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Pattaya';
+    background-color: whitesmoke;
+}
+
+h1{
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-size: 4vh;
+    letter-spacing: 0.25rem;
+}
