@@ -42,3 +42,15 @@ h1{
 .image-container img {
     width: 100%;
 }
+
+/* media query */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.5vh;
+    }
+
+    .image-container {
+        margin: 3vh;
+        margin-top: 1.5vh;
+    }
+}
