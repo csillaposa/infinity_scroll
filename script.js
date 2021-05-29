@@ -13,9 +13,14 @@ let photosArray = [];
     API key: Your Apps - New Application
 */
 
-const count = 10;
+const count = 30;
 const apiKey = 'eEOjgtu82bLyYpwq1NqGaDI_Zh4LvLNxPLN8WZlzkiQ';
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
+
+//check if all images were loaded
+function imageLoaded() {
+    console.log('image loaded');
+}
 
 //helper function to set attributes on DOM elements
 function setAttributes(element, attributes) {
@@ -41,6 +46,8 @@ function displayPhotos() {
             alt: photo.alt_description,
             title: photo.alt_description
         });
+        //event listener, check when each is finished loading
+        img.addEventListener('load', imageLoaded);
         //put <img> inside <a>, then put both inside image container
         item.appendChild(img);
         imageContainer.appendChild(item);
