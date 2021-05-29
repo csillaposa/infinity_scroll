@@ -40,6 +40,7 @@ function setAttributes(element, attributes) {
 
 //creating elements for links and photos, add to DOM
 function displayPhotos() {
+    imagesLoaded = 0;
     totalImages = photosArray.length;
     console.log('total images', totalImages);
     //forEach to run function for each object in photosArray
