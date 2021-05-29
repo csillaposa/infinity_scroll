@@ -1,3 +1,8 @@
+const imageContainer = document.getElementById('image-container');
+const loader = document.getElementById('loader');
+
+let photosArray = [];
+
 /* Setting up Unsplash API
     unsplash.com/documentation
     quick shortcuts - setting up an application - jump to documentation
@@ -9,15 +14,15 @@
 */
 
 const count = 10;
-const apiKey = 'API_KEY';
+const apiKey = 'eEOjgtu82bLyYpwq1NqGaDI_Zh4LvLNxPLN8WZlzkiQ';
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
 //Get photos from Unsplash API
 async function getPhotos() {
     try {
         const response = await fetch(apiUrl);
-        const data = await response.json();
-        console.log(data);
+        photosArray = await response.json();
+        console.log(photosArray);
     } catch (error) {
         //catch error
     }
